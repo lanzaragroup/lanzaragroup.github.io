@@ -1,3 +1,72 @@
+class MediaCarousel extends HTMLElement {
+  templateElement = (description) => {
+    let container = document.createElement('div');
+    container.className = "item carousel-item";
+
+    let child = null;
+    if (description.video) {
+      child = document.createElement('video');
+      child.className = "d-block w-full carousel-video";
+      child.setAttribute("loop", true);
+      child.setAttribute("autoplay", true);
+      child.setAttribute("playsinline", true);
+      child.setAttribute("muted", true);
+
+      let source = document.createElement('source');
+      source.setAttribute("src", description.url);
+      source.setAttribute("type", "video/mp4");
+      child.appendChild(source);
+    } else {
+      child = document.createElement('img');
+      child.className = "d-block w-100";
+      child.setAttribute("src", description.url);
+    }
+
+    container.appendChild(child);
+
+    return container;
+  }
+
+  rotate = () => {
+    this.childElements[this.activeIndex].classList.remove("active");
+    this.activeIndex = (this.activeIndex + 1) % this.childElements.length;
+    this.childElements[this.activeIndex].classList.add("active");
+    if (this.descriptions[this.activeIndex].video) {
+      let video = this.childElements[this.activeIndex].querySelector("video");
+      video.currentTime = 0;
+    }
+    setTimeout(() => this.rotate(), this.descriptions[this.activeIndex].interval);
+  }
+
+  constructor() {
+    super();
+    const template = document.getElementById("media-carousel-template");
+    this.innerHTML = template.innerHTML;
+    let root = this.querySelector(".carousel");
+
+    this.descriptions = JSON.parse(this.dataset.items);
+    this.childElements = this.descriptions.map(this.templateElement);
+
+    this.activeIndex = this.childElements.length - 1;
+    this.childElements.forEach(child => {
+      root.appendChild(child);
+    });
+
+    this.rotate();
+  }
+}
+
+class FundingAttribution extends HTMLElement {
+  constructor() {
+    super();
+    const template = document.getElementById("funding-attribution-template");
+    this.innerHTML = template.innerHTML;
+
+    this.querySelector(".logo").setAttribute("src", this.dataset.img);
+    this.querySelector(".agency").innerHTML = this.dataset.agency;
+    this.querySelector(".grant").innerHTML = this.dataset.grant || "";
+  }
+}
 
 class ResearchHighlight extends HTMLElement {
   constructor() {
@@ -85,7 +154,9 @@ class TeamMember extends HTMLElement {
   }
 }
 
+window.customElements.define("media-carousel", MediaCarousel);
 window.customElements.define("lab-initiative", LabInitiative);
+window.customElements.define("funding-attribution", FundingAttribution);
 window.customElements.define("team-member", TeamMember);
 window.customElements.define("short-publication", ShortPublication);
 window.customElements.define("research-highlight", ResearchHighlight);
@@ -106,5 +177,3 @@ function setup() {
 }
 
 setup();
-
-

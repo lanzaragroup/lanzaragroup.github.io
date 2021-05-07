@@ -38,13 +38,28 @@
   <template id="research-highlight-template">
   <div class="highlight max-w-sm w-sm">
     <div>
-    <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
-    <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
-    <p class="highlight-description text-gray-600"></p>
-    <div class="flex flex-row mt-4">
-      <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
-      <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span class="link-decoration">⤤</span></a>
+      <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
+      <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
+      <p class="highlight-description text-gray-600"></p>
+      <div class="flex flex-row mt-4">
+        <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
+        <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span
+            class="link-decoration">⤤</span></a>
+      </div>
     </div>
+  </div>
+</template>
+
+<tenmplate id="media-carousel-template">
+  <div class="carousel"></div>
+</tenmplate>
+
+<template id="funding-attribution-template">
+  <div class="funding-attribution flex flex-row pb-8">
+    <img class="logo pr-4"></img>
+    <div class="ml-auto text-right max-w-md">
+      <p class="agency font-light text-lg">Agency</p>
+      <p class="grant text-sm font-semibold">Grant</p>
     </div>
   </div>
 </template>
@@ -77,26 +92,24 @@
 </template>
 
 <template id="lab-initiative-template">
-  <div class="px-5">
-  <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
-  <a class="initiative-link" href="#">
-    <div class="w-full">
-      <div class="rounded-lg shadow-xs mb-4">
-        <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
-          <div class="px-3 py-4 relative z-10 flex flex-row">
-            <div>
-              <img class="initiative-image" src="#" />
+  <div class="px-12">
+    <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
+    <a class="initiative-link" href="#">
+      <div class="w-full">
+        <div class="rounded-lg shadow-xs mb-4">
+          <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
+            <div class="px-3 py-4 relative z-10 flex flex-row">
+              <div>
+                <img class="initiative-image" src="#" />
+              </div>
+              <p class="text ml-4 w-2/3 initiative-content"></p>
             </div>
-            <p class="text ml-4 w-2/3 initiative-content"></p>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
   </div>
 </template>
-
-
   <div id="topnav">
   <nav class="bg-white border-b-2 shadow-sm">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -140,137 +153,31 @@
   </nav>
   <!-- JS Functionality for Dropdowns is in main.js -->
 </div>
-  <section class="landing-splash pb-12">
-  <header class="pt-8 mx-12 text-white mb-8">
-    <h1 class="font-light text-2xl mb-2 w-3/4">Our mission is to discover and engineer quantum phenomena and biological
-processes through the development and application of advanced scientific tools
-and artificial intelligence.
-</h1>
-  </header>
-  <div class="flex flex-col items-center w-screen carousel-container">
-    <div id="landing-carousel" class="carousel slide">
-    <div class="carousel-inner">
-        
-        
-        <div class="item carousel-item active" data-interval="3000">
-        
-            
-            
-            <img class="d-block w-100" src=resource/banner/group_photo_2018.jpg>
-            
-            
-            
-        </div>
-        
-        
-        <div class="item carousel-item" data-interval="10100">
-        
-            
-            <video class="d-block w-full carousel-video" loop="true" autoplay="autoplay" muted>
-                <source src="/chstan/lanzara-staging/resource/banner/anneal.mp4" type="video/mp4">
-            </video>
-            
-        </div>
-        
-        
-        <div class="item carousel-item" data-interval="3000">
-        
-            
-            
-            <img class="d-block w-100" src=resource/banner/sam_loading_samples.jpg>
-            
-            
-            
-        </div>
-        
-        
-        <div class="item carousel-item" data-interval="3000">
-        
-            
-            
-            <img class="d-block w-100" src=resource/hardware/spin-detector.jpg>
-            
-            
-            
-        </div>
-        
-        
-        <div class="item carousel-item" data-interval="3000">
-        
-            
-            
-            <img class="d-block w-100" src=resource/hardware/optical-table.jpg>
-            
-            
-            
-        </div>
-        
-        
-        <div class="item carousel-item" data-interval="3000">
-        
-            
-            
-            <img class="d-block w-100" src=resource/hardware/arpes-chamber.jpg>
-            
-            
-            
-        </div>
-        
+  <section class="landing-splash">
+  <div class="landing-container">
+    <header class="lab-name-callout text-white">
+      <h1 class="font-light text-4xl">The Lanzara Group</h1>
+    </header>
+    <div class="landing-carousel-container flex flex-col items-center">
+      <media-carousel data-name="landing-carousel" data-items="[{&quot;title&quot;:&quot;Group Photo (2018)&quot;,&quot;video&quot;:false,&quot;interval&quot;:3000,&quot;url&quot;:&quot;resource/banner/group_photo_2018.jpg&quot;},{&quot;title&quot;:&quot;Cobalt Anneal&quot;,&quot;interval&quot;:10100,&quot;video&quot;:true,&quot;url&quot;:&quot;resource/banner/anneal.mp4&quot;},{&quot;title&quot;:&quot;Sam Loading Samples&quot;,&quot;interval&quot;:3000,&quot;video&quot;:false,&quot;url&quot;:&quot;resource/banner/sam_loading_samples.jpg&quot;},{&quot;title&quot;:&quot;Spin-ToF&quot;,&quot;interval&quot;:3000,&quot;video&quot;:false,&quot;url&quot;:&quot;resource/hardware/spin-detector.jpg&quot;},{&quot;title&quot;:&quot;4th Harmonic Generation from Ti:Sapphire oscillator&quot;,&quot;interval&quot;:3000,&quot;video&quot;:false,&quot;url&quot;:&quot;resource/hardware/optical-table.jpg&quot;},{&quot;title&quot;:&quot;ARPES Chamber&quot;,&quot;interval&quot;:3000,&quot;video&quot;:false,&quot;url&quot;:&quot;resource/hardware/arpes-chamber.jpg&quot;}]">
+      </media-carousel>
     </div>
-    <a class="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#landing-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-        function initialize() {
-            window.carouselId = '#landing-carousel';
-            var t;
-
-            var start = parseInt($(window.carouselId).find('.active').attr('data-interval'));
-            if (start < 1500) start = 1500;
-
-            t = setTimeout(() => {
-                $(window.carouselId).carousel({interval: 1000});
-            }, start-1000);
-
-            $(window.carouselId).on('slid.bs.carousel', function () {
-                clearTimeout(t);
-                var duration = parseInt($(this).find('.active').attr('data-interval'));
-                $(window.carouselId).carousel('pause');
-                if ($(this).find('.active video').length) {
-                    $(this).find('.active video').get(0).currentTime = 0;
-                }
-                t = setTimeout("$(window.carouselId).carousel();", duration-1000);
-            });
-
-            $('.carousel-control.right').on('click', function(){
-                clearTimeout(t);
-            });
-
-            $('.carousel-control.left').on('click', function(){
-                clearTimeout(t);
-            });
-        }
-
-        setTimeout(initialize, 10);
-    })
-</script>
-
   </div>
 </section>
 
+<section class="grid grid-cols-1 min-w-screen py-8">
+  <p class="text-2xl font-light px-20">
+    Our mission is to discover and engineer quantum phenomena and biological
+processes through the development and application of advanced scientific tools
+and artificial intelligence.
+
+  </p>
+</section>
+
 <div>
- <section class="grid grid-cols-1 min-w-screen min-h-screen bg-gray-100 xl:grid-cols-2 pt-8">
-    <lab-initiative data-href="/chstan/lanzara-staging/project/quantum-materials"
-                    data-title="Quantum Materials"
-                    data-image="https://lorempixel.com/g/400/200/abstract"
-                    data-content="The name quantum materials represent the large class of materials
+  <section class="grid grid-cols-1 min-w-screen min-h-screen xl:grid-cols-2 pt-8">
+    <lab-initiative data-href="/chstan/lanzara-staging/project/quantum-materials" data-title="Quantum Materials"
+      data-image="" data-content="The name quantum materials represent the large class of materials
                     whose behavior defies any classical explanation, and where the strong correlation
                     between electrons, topology and dimensionality drive the system toward novel quantum
                     behaviors.
@@ -278,64 +185,51 @@ and artificial intelligence.
                     Today quantum materials promise to enable a paradigm shift in the technologies
                     of the future, with wide ranging applications from novel electronics and photonics, to
                     neurology and quantum computing.
-"
-
-    ></lab-initiative>
+"></lab-initiative>
 
     <lab-initiative data-href="/chstan/lanzara-staging/project/driven-materials"
-                    data-title="Optical control and manipulation of materials"
-                    data-image="https://lorempixel.com/g/400/200/abstract"
-                    data-content="
+      data-title="Optical control and manipulation of materials" data-image="" data-content="
                     Our goal is to exploits advanced ways in which ultrashort and intense
                     light pulses can be used to create, manipulate and eventually control new
                     quasiparticle distributions and topologies in materials; and how we can
                     tailored vibrational and electronic excitations to influence fundamental
-                    interactions and create new emergent collective states."
-    ></lab-initiative>
+                    interactions and create new emergent collective states."></lab-initiative>
 
-    <lab-initiative data-href="/chstan/lanzara-staging/project/sustainable-materials"
-                    data-title="Sustainable Materials"
-                    data-image="https://lorempixel.com/g/400/200/abstract"
-                    data-content="Ecological overshoot is one of the grand challenges of the 21st
+    <lab-initiative data-href="/chstan/lanzara-staging/project/sustainable-materials" data-title="Sustainable Materials"
+      data-image="" data-content="Ecological overshoot is one of the grand challenges of the 21st
                     century.   Humans are consuming natural resources and generating waste at an
                     unsustainable rate.  To tackle the problem at its root a new paradigm in the way
                     materials are designed and used is needed.  Our focus is to engineer new quantum
                     multifunctional materials with self-reconfigurability properties, obtained
                     through a  molecular-level control of the interface.  Prof. Lanzara is the
                     director for the Center for sustainable materials and innovation at UC Berkeley.
-                    Our effort in this field is interconnected with the activity of the Center."
-    ></lab-initiative>
+                    Our effort in this field is interconnected with the activity of the Center."></lab-initiative>
 
-    <lab-initiative data-href="/chstan/lanzara-staging/project/quantum-biology"
-                    data-title="Quantum Biology"
-                    data-image="https://lorempixel.com/g/400/200/abstract"
-                    data-content="The new emerging field of quantum biology studies the way quantum
+    <lab-initiative data-href="/chstan/lanzara-staging/project/quantum-biology" data-title="Quantum Biology" data-image=""
+      data-content="The new emerging field of quantum biology studies the way quantum
                     mechanics governs biological processes. Our group applies state of the art tools
                     developed in our laboratory to study quantum materials, to understand some of
                     the fundamental processes in biology such as protein assemblies, catalysts reactions
-                    and interface and synthesis of DNA into hybrid materials."
-    ></lab-initiative>
+                    and interface and synthesis of DNA into hybrid materials."></lab-initiative>
 
-    <lab-initiative data-href="/chstan/lanzara-staging/project/advanced-techniques"
-                    data-title="Advanced Techniques"
-                    data-image="https://lorempixel.com/g/400/200/abstract"
-                    data-content="Our laboratory utilizes state of the art table top spectroscopy and
+    <lab-initiative data-href="/chstan/lanzara-staging/project/advanced-techniques" data-title="Advanced Techniques"
+      data-image="" data-content="Our laboratory utilizes state of the art table top spectroscopy and
                     microscopy techniques, properly designed to tackle frontier experiments. We also
                     have ongoing programs with  some of the user facilities at the Lawrence Berkeley
-                    National Laboratory, such as the Advanced Light Source and the Molecular Foundry."
-    ></lab-initiative>
- </section>
+                    National Laboratory, such as the Advanced Light Source and the Molecular Foundry.">
+    </lab-initiative>
+  </section>
 </div>
-
   <script>
   window.BASE_URL = "/chstan/lanzara-staging";
 </script>
 <script src="/chstan/lanzara-staging/js/main.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
   </body>

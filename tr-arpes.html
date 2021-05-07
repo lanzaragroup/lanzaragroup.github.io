@@ -38,13 +38,28 @@
   <template id="research-highlight-template">
   <div class="highlight max-w-sm w-sm">
     <div>
-    <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
-    <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
-    <p class="highlight-description text-gray-600"></p>
-    <div class="flex flex-row mt-4">
-      <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
-      <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span class="link-decoration">⤤</span></a>
+      <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
+      <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
+      <p class="highlight-description text-gray-600"></p>
+      <div class="flex flex-row mt-4">
+        <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
+        <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span
+            class="link-decoration">⤤</span></a>
+      </div>
     </div>
+  </div>
+</template>
+
+<tenmplate id="media-carousel-template">
+  <div class="carousel"></div>
+</tenmplate>
+
+<template id="funding-attribution-template">
+  <div class="funding-attribution flex flex-row pb-8">
+    <img class="logo pr-4"></img>
+    <div class="ml-auto text-right max-w-md">
+      <p class="agency font-light text-lg">Agency</p>
+      <p class="grant text-sm font-semibold">Grant</p>
     </div>
   </div>
 </template>
@@ -77,26 +92,24 @@
 </template>
 
 <template id="lab-initiative-template">
-  <div class="px-5">
-  <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
-  <a class="initiative-link" href="#">
-    <div class="w-full">
-      <div class="rounded-lg shadow-xs mb-4">
-        <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
-          <div class="px-3 py-4 relative z-10 flex flex-row">
-            <div>
-              <img class="initiative-image" src="#" />
+  <div class="px-12">
+    <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
+    <a class="initiative-link" href="#">
+      <div class="w-full">
+        <div class="rounded-lg shadow-xs mb-4">
+          <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
+            <div class="px-3 py-4 relative z-10 flex flex-row">
+              <div>
+                <img class="initiative-image" src="#" />
+              </div>
+              <p class="text ml-4 w-2/3 initiative-content"></p>
             </div>
-            <p class="text ml-4 w-2/3 initiative-content"></p>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
   </div>
 </template>
-
-
   <div id="topnav">
   <nav class="bg-white border-b-2 shadow-sm">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -202,9 +215,10 @@ J. Graf, C. Jozwiak, C. L. Smallwood, H. Eisaki, R. A. Kaindl, D-H. Lee, and A. 
 <script src="/chstan/lanzara-staging/js/main.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
   </body>

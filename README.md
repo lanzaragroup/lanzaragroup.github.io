@@ -6,18 +6,28 @@ Plus, maintaining the website isn't that tricky. The whole thing consists of sta
 
 Here's what you need to do to get started:
 
-1. Install Jekyll
-2. Clone this website
-3. Make any necessary changes
-4. Ensure that the site looks alright with `bundle exec jekyll serve --incremental`
-5. Compile the site with `jekyll build`
-6. Push the finished site to the Berkeley FTP server with
+1. Install Ruby and the Ruby Version Manager (RVM)
+2. Use rvm to select Ruby 3.0.1
+    ```
+    $> rvm install ruby-3.0.1
+    $> rvm use 3.0.1
+    ```
+3. Clone this repository
+4. Clone the staging repository next to this repository (i.e in the same parent folder)
+5. Make any necessary in the source here
+6. Ensure that the site looks alright with `bundle exec jekyll serve --incremental` and then navigate to the URL it provides
+7. Commit your changes and push them
+    ```
+    $> git add .
+    $> git commit -m "I did blah blah blah"
+    $> git push
+    ```
+7. Deploy the site by running
+    ```
+    $> python scripts/deploy_site.py
+    ```
 
-```shell script
-$> UNFINISHED 
-```
-
-## Making Changes
+## Examples of Making Changes
 
 ### Team Members
 
@@ -40,4 +50,4 @@ If you need to add a new type of content that gets repeated a lot, make an HTML 
 
 ### Styles
 
-We use [Tailwind CSS](tailwindcss.com), please do not change this to introduce a different CSS framework unless you have a very good reason.
+We use [Tailwind CSS](tailwindcss.com), please do not change this to introduce a different CSS framework unless you have a very good reason. You can change styling of course.

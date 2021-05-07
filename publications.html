@@ -38,13 +38,28 @@
   <template id="research-highlight-template">
   <div class="highlight max-w-sm w-sm">
     <div>
-    <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
-    <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
-    <p class="highlight-description text-gray-600"></p>
-    <div class="flex flex-row mt-4">
-      <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
-      <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span class="link-decoration">⤤</span></a>
+      <img class="highlight-image max-w-full mx-auto h-48 max-h-48 mb-4" src="#" />
+      <h2 class="title mb-2 text-lg font-normal text-gray-800"></h2>
+      <p class="highlight-description text-gray-600"></p>
+      <div class="flex flex-row mt-4">
+        <a class="pop-link pr-4 font-semibold text-sm text-gray-600" href="#">Learn More</a>
+        <a class="paper-link font-semibold text-sm text-gray-600" href="#">Read paper <span
+            class="link-decoration">⤤</span></a>
+      </div>
     </div>
+  </div>
+</template>
+
+<tenmplate id="media-carousel-template">
+  <div class="carousel"></div>
+</tenmplate>
+
+<template id="funding-attribution-template">
+  <div class="funding-attribution flex flex-row pb-8">
+    <img class="logo pr-4"></img>
+    <div class="ml-auto text-right max-w-md">
+      <p class="agency font-light text-lg">Agency</p>
+      <p class="grant text-sm font-semibold">Grant</p>
     </div>
   </div>
 </template>
@@ -77,26 +92,24 @@
 </template>
 
 <template id="lab-initiative-template">
-  <div class="px-5">
-  <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
-  <a class="initiative-link" href="#">
-    <div class="w-full">
-      <div class="rounded-lg shadow-xs mb-4">
-        <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
-          <div class="px-3 py-4 relative z-10 flex flex-row">
-            <div>
-              <img class="initiative-image" src="#" />
+  <div class="px-12">
+    <h2 class="initiative-title font-bold text-gray-900 pt-4 pb-2"></h2>
+    <a class="initiative-link" href="#">
+      <div class="w-full">
+        <div class="rounded-lg shadow-xs mb-4">
+          <div class="rounded-lg bg-white shadow-md relative overflow-hidden">
+            <div class="px-3 py-4 relative z-10 flex flex-row">
+              <div>
+                <img class="initiative-image" src="#" />
+              </div>
+              <p class="text ml-4 w-2/3 initiative-content"></p>
             </div>
-            <p class="text ml-4 w-2/3 initiative-content"></p>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
   </div>
 </template>
-
-
   <div id="topnav">
   <nav class="bg-white border-b-2 shadow-sm">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -159,6 +172,166 @@
 
   <li class="mb-4">
 <short-publication
+    data-title="Orbital-dependent spin textures in Bi2Se3 quantum well states"
+    data-authors="[&quot;Chiu-Yun Lin&quot;,&quot;Kenneth Gotlieb&quot;,&quot;Chris Jozwiak&quot;,&quot;Jonathan A. Sobota&quot;,&quot;Zhi-Xun Shen&quot;,&quot;James G. Analytis&quot;,&quot;Zahid Hussain&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2018"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.075149"
+    data-journal="Phys. Rev. B 98, 075149 (2018)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Doping-dependent correlation effects in (Sr(1-x)Lax)3Ir2O7"
+    data-authors="[&quot;Gregory Affeldt&quot;,&quot;Tom Hogan&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Ashvin Vishwanath&quot;,&quot;Stephen D. Wilson&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2018"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.125111"
+    data-journal="Phys. Rev. B 97, 125111 (2018)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="PyARPES: An analysis framework for multimodal angle-resolved photoemission spectroscopy"
+    data-authors="[&quot;Conrad Stansbury&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2020"
+    data-href="https://www.sciencedirect.com/science/article/pii/S2352711019301633"
+    data-journal="SoftwareX 11, January-June 2020 100472 (2020)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Ultrafast dynamics of electron-phonon coupling in a metal"
+    data-authors="[&quot;Choongyu Hwang&quot;,&quot;Wentao Zhang&quot;,&quot;Koshi Kurashima&quot;,&quot;Robert A. Kaindl&quot;,&quot;Tadashi Adachi&quot;,&quot;Yoji Koike&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2019"
+    data-href="https://iopscience.iop.org/article/10.1209/0295-5075/126/57001/meta"
+    data-journal="EPL 126 57001 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Orbital Character Effects in the Photon Energy and Polarization Dependence of Pure C60 Photoemission"
+    data-authors="[&quot;Drew W. Latzke&quot;,&quot;Claudia Ojeda-Aristizabal&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Ryan Reno&quot;,&quot;Alex Zettl&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2019"
+    data-href="https://pubs.acs.org/doi/abs/10.1021/acsnano.9b04536"
+    data-journal="ACS Nano 13, 11, 12710-12718 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Interplay of superconductivity and bosonic coupling in the peak-dip-hump structure of Bi2Sr2CaCu2O8+δ"
+    data-authors="[&quot;Tristan L. Miller&quot;,&quot;Wentao Zhang&quot;,&quot;Jonathan Ma&quot;,&quot;Hiroshi Eisaki&quot;,&quot;Joel E. Moore&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2018"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134517"
+    data-journal="Phys. Rev. B 97, 134517 (2018)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Crystalline symmetry-protected non-trivial topology in prototype compound BaAl4"
+    data-authors="[&quot;Kefeng Wang&quot;,&quot;Ryo Mori&quot;,&quot;Zhijun Wang&quot;,&quot;Limin Wang&quot;,&quot;Jonathan Han Son Ma&quot;,&quot;Drew W. Latzke&quot;,&quot;David E. Graf&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Daniel Campbell&quot;,&quot;B. Andrei Bernevig&quot;,&quot;Alessandra Lanzara&quot;,&quot;Johnpierre Paglione&quot;]"
+    data-year="2021"
+    data-href="https://www.nature.com/articles/s41535-021-00325-6"
+    data-journal="npj Quantum Materials 6, 28 (2021)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Spatial nematic fluctuation in BaFe2(As(1-x)Px)2 revealed by spatially and angle-resolved photoemission spectroscopy"
+    data-authors="[&quot;Jonathan Ma&quot;,&quot;Ming Yi&quot;,&quot;Gregory Affeldt&quot;,&quot;Ian Hayes&quot;,&quot;Chris Jozwiak&quot;,&quot;Aaron Bostwick&quot;,&quot;Eli Rotenberg&quot;,&quot;James G. Analytis&quot;,&quot;Robert J. Birgeneau&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2020"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.101.094515"
+    data-journal="Phys. Rev. B 101, 094515 (2020)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Efficient prediction of time- and angle-resolved photoemission spectroscopy measurements on a nonequilibrium BCS superconductor"
+    data-authors="[&quot;Tianrui Xu&quot;,&quot;Takahiro Morimoto&quot;,&quot;Alessandra Lanzara&quot;,&quot;Joel E. Moore&quot;]"
+    data-year="2019"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.035117"
+    data-journal="Phys. Rev. B 99, 035117 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Competition between magnetic order and charge localization in Na2IrO3 thin crystal devices"
+    data-authors="[&quot;Josue Rodriguez&quot;,&quot;Gilbert Lopez&quot;,&quot;Francisco Ramirez&quot;,&quot;Nicholas P. Breznay&quot;,&quot;Robert Kealhofer&quot;,&quot;Vikram Nagarajan&quot;,&quot;Drew Latzke&quot;,&quot;Samantha Wilson&quot;,&quot;Naomy Marrufo&quot;,&quot;Peter Santiago&quot;,&quot;Jared Lara&quot;,&quot;Amirari Diego&quot;,&quot;Everardo Molina&quot;,&quot;David Rosser&quot;,&quot;Hadi Tavassol&quot;,&quot;Alessandra Lanzara&quot;,&quot;James G. Analytis&quot;,&quot;Claudia Ojeda-Aristizabal&quot;]"
+    data-year="2020"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.101.235415"
+    data-journal="Phys. Rev. B 101, 235415 (2020)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Observation of highly dispersive bands in pure thin film C60"
+    data-authors="[&quot;Drew W. Latzke&quot;,&quot;Claudia Ojeda-Aristizabal&quot;,&quot; Sinéad M. Griffin&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Jeffrey B. Neaton&quot;,&quot;Alex Zettl&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2017"
+    data-href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.045425"
+    data-journal="Phys. Rev. B 99, 045425 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Emergence of Kondo Resonance in Graphene Intercalated with Cerium"
+    data-authors="[&quot;Jinwoong Hwang&quot;,&quot;Kyoo Kim&quot;,&quot;Hyejin Ryu&quot;,&quot;Jingul Kim&quot;,&quot;Ji-Eun Lee&quot;,&quot;Sooran Kim&quot;,&quot;Minhee Kang&quot;,&quot;Byeong-Gyu Park&quot;,&quot;Alessandra Lanzara&quot;,&quot;Jinwook Chung&quot;,&quot;Sung-Kwan Mo&quot;,&quot;Jonathan Denlinger&quot;,&quot;Byung Il Min&quot;,&quot;Choongyu Hwang&quot;]"
+    data-year="2018"
+    data-href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.8b00784"
+    data-journal="Nano Lett. 18, 6, 3661-3666 (2018)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Controlling a Van Hove singularity and Fermi surface topology at a complex oxide heterostructure interface"
+    data-authors="[&quot;Ryo Mori&quot;,&quot;Patrick B. Marshall&quot;,&quot;Kaveh Ahadi&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Susanne Stemmer&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2019"
+    data-href="https://www.nature.com/articles/s41467-019-13046-z"
+    data-journal="Nature Communications 10, 5534 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Manipulating long-lived topological surface photovoltage in bulk-insulating topological insulators Bi2Se3 and Bi2Te3"
+    data-authors="[&quot;Samuel Ciocys&quot;,&quot;Takahiro Morimoto&quot;,&quot;Ryo Mori&quot;,&quot;Kenneth Gotlieb&quot;,&quot;Zahid Hussain&quot;,&quot;James G. Analytis&quot;,&quot;Joel E. Moore&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2020"
+    data-href="https://www.nature.com/articles/s41535-020-0218-4"
+    data-journal="npj Quantum Materials 5, 16 (2020)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="A setup for extreme-ultraviolet ultrafast angle-resolved photoelectron spectroscopy at 50-kHz repetition rate"
+    data-authors="[&quot;Jan Heye Buss&quot;,&quot;He Wang&quot;,&quot;Yiming Xu&quot;,&quot;Julian Maklar&quot;,&quot;Frederic Joucken&quot;,&quot;Lingkun Zeng&quot;,&quot;Sebastian Stoll&quot;,&quot;Chris Jozwiak&quot;,&quot;John Pepper&quot;,&quot;Yi-De Chuang&quot;,&quot;Jonathan D. Denlinger&quot;,&quot;Zahid Hussain&quot;,&quot;Alessandra Lanzara&quot;,&quot;Robert A. Kaindl&quot;]"
+    data-year="2019"
+    data-href="https://aip.scitation.org/doi/pdf/10.1063/1.5079677"
+    data-journal="Review of Scientific Instruments 90, 023105 (2019)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
+    data-title="Revealing hidden spin-momentum locking in a high-temperature cuprate superconductor"
+    data-authors="[&quot;Kenneth Gottlieb&quot;,&quot;Chiu-Yun Lin&quot;,&quot;Maksym Serbyn&quot;,&quot;Wentao Zhang&quot;,&quot;Christopher L. Smallwood&quot;,&quot;Christopher Jozwiak&quot;,&quot;Hiroshi Eisaki&quot;,&quot;Zahid Hussain&quot;,&quot;Ashvin Vishwanath&quot;,&quot;Alessandra Lanzara&quot;]"
+    data-year="2018"
+    data-href="https://science.sciencemag.org/content/362/6420/1271.abstract"
+    data-journal="Science 362 6420, 1271-1275 (2018)"
+></short-publication>
+  </li>
+
+  <li class="mb-4">
+<short-publication
     data-title="Emergence of Kondo Resonance in Graphene Intercalated with Cerium"
     data-authors="[&quot;Jinwoong Hwang&quot;,&quot;Kyoo Kim&quot;,&quot;Hyejin Ryu&quot;,&quot;Jingul Kim&quot;,&quot;Ji-Eun Lee&quot;,&quot;Sooran Kim&quot;,&quot;Minhee Kang&quot;,&quot;Byeong-Gyu Park&quot;,&quot;Alessandra Lanzara&quot;,&quot;Jinwook Chung&quot;,&quot;Sung-Kwan Mo&quot;,&quot;Jonathan Denlinger&quot;,&quot;Byung Il Min&quot;,&quot;and Choongyu Hwang&quot;]"
     data-year="2018"
@@ -169,7 +342,7 @@
 
   <li class="mb-4">
 <short-publication
-    data-title="Temperature-Dependent Electron�Electron Interaction in Graphene on SrTiO3"
+    data-title="Temperature-Dependent Electron-Electron Interaction in Graphene on SrTiO3"
     data-authors="[&quot;Hyejin Ryu&quot;,&quot;Jinwoong Hwang&quot;,&quot;Debin Wang&quot;,&quot;Ankit S. Disa&quot;,&quot;Jonathan Denlinger&quot;,&quot;Yuegang Zhang&quot;,&quot;Sung-Kwan Mo&quot;,&quot;Choongyu Hwang&quot;,&quot;and Alessandra Lanzara&quot;]"
     data-year="2017"
     data-href="http://pubs.acs.org/doi/abs/10.1021/acs.nanolett.7b01650"
@@ -1836,9 +2009,10 @@
 <script src="/chstan/lanzara-staging/js/main.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
   </body>
