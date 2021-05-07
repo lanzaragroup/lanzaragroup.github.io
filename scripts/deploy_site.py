@@ -147,7 +147,7 @@ guard_ruby_version(RUBY_VERSION)
 print("Okay.")
 
 print_header(f"Checking source repo is committed")
-# guard_jekyll_repo_clean()
+guard_jekyll_repo_clean()
 print("Okay.")
 
 print_header(f"Running bundle install...")
