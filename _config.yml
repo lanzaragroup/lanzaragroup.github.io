@@ -1,5 +1,10 @@
 title: The Lanzara Group
+email: chstan@berkeley.edu
 author: Lanzara Group Members
+description: >-
+  The Lanzara Research Group,
+  Ultrafast Photoemission and Optical Spectroscopies of Quantum Materials
+baseurl: "/lanzara/new" # This needs to match the value from the Jekyll repo
 
 exclude:
   - JEKYLL_REPO_GIT_COMMIT
