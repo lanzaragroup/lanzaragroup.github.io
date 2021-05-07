@@ -1,0 +1,6 @@
+title: The Lanzara Group
+author: Lanzara Group Members
+
+exclude:
+  - JEKYLL_REPO_GIT_COMMIT
+  - README.md
