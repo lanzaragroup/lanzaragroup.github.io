@@ -1,0 +1,66 @@
+@import url(vendor/bootstrap-carousel.css);
+@import url(vendor/tailwind.min.css);
+/* Components */
+/* Typography */
+.carousel-container { background: rgba(0, 0, 0, 0.4); }
+
+.team-member { max-width: 32rem; }
+
+.text-white-alpha-800 { color: rgba(255, 255, 255, 0.8); }
+
+.text-white-alpha-600 { color: rgba(255, 255, 255, 0.6); }
+
+.text-white-alpha-400 { color: rgba(255, 255, 255, 0.4); }
+
+.project-header, .landing-splash { background: linear-gradient(0.3turn, #0077b6, #00b4d8); }
+
+.dropdown.closed .dropdown-content { display: none; }
+
+.portrait { width: 180px !important; min-width: 180px; }
+
+.portrait img { min-width: 180px; width: 180px; }
+
+.research-highlights .highlight { margin: 2rem 4rem; }
+
+.carousel-video { width: 100% !important; background-size: cover; z-index: -1; }
+
+#landing-carousel { max-width: 800px; }
+
+#landing-carousel video { max-width: 100%; }
+
+#landing-carousel .item { max-height: 350px; height: 350px; overflow: hidden; }
+
+#landing-carousel .item img { height: 100%; object-fit: cover; }
+
+#landing-carousel .item video { max-height: 350px; object-fit: cover; }
+
+body.landing #main { padding-left: 0; padding-right: 0; }
+
+@media (min-width: 80em) { .masthead__inner-wrap { max-width: 100%; } .page__footer footer { max-width: 100%; } #main { max-width: 1600px; } }
+
+.page__footer-funding .flex-item { max-height: 40px; }
+
+.page__footer-funding .flex-item img { height: 40px; }
+
+.page__footer footer { display: flex; flex-flow: row; margin-top: 0.5rem; padding-bottom: 0.5rem; }
+
+.page__footer footer .page__footer-follow { margin-left: 0; margin-right: auto; }
+
+.page__footer footer .page__footer-follow li { padding: 0; margin-bottom: 0; line-height: 40px; }
+
+.page__footer footer .page__footer-follow li svg { margin-right: 4px; }
+
+.page__footer footer .page__footer-funding { margin-left: auto; margin-right: 0; }
+
+.page__footer footer .page__footer-funding .flex-item:not(:last-child) { margin-right: 0.5rem; }
+
+.sidebar.sticky { height: unset; max-height: calc(100% - 8em); overflow-y: scroll; }
+
+figure.figure { display: inline-block; margin: 0.5rem; }
+
+/* reset font animations to exclude KaTeX, this prevents bouncing during resizing */
+b:not(.katex), i:not(.katex), strong:not(.katex), em:not(.katex), blockquote:not(.katex), p:not(.katex), q:not(.katex), span:not(.katex), figure:not(.katex), img:not(.katex), h1:not(.katex), h2:not(.katex), header:not(.katex), input:not(.katex), a:not(.katex), tr:not(.katex), td:not(.katex), form button:not(.katex), input[type="submit"]:not(.katex), .btn:not(.katex), #goog-wm-sb:not(.katex), .highlight:not(.katex), .archive__item-teaser:not(.katex) { -webkit-transition: none; transition: none; }
+
+@media (max-width: 500px) { html .page__footer footer { flex-direction: column; flow-flow: column; } }
+
+/*# sourceMappingURL=styles.css.map */
