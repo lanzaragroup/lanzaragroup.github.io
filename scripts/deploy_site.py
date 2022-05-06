@@ -10,7 +10,7 @@ from pathlib import Path
 import os
 
 JEKYLL_REPO_ROOT: Path = (Path(__file__).parent / "..").resolve()
-DEPLOY_REPO_ROOT = (JEKYLL_REPO_ROOT / ".." / "lanzara-staging").resolve()
+DEPLOY_REPO_ROOT = (JEKYLL_REPO_ROOT / ".." / "lanzaragroup.github.io").resolve()
 RUBY_VERSION = "3.0.1"
 MISSING_RUBY_MESSAGE = """
 It looks like you do not have Ruby installed. Please install
